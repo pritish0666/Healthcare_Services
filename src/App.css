@@ -1,38 +1,115 @@
-.App {
+.app-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #218838;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.service-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-item {
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  max-height: 400px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: popup-fade-in 0.3s ease-in-out;
+}
+
+.service-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.service-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.service-form button {
+  padding: 10px;
+  background-color: #28a745;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.service-form button:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
+.close-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.close-btn:hover {
+  background-color: #e14a4a;
+}
+
+@keyframes popup-fade-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-50px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
